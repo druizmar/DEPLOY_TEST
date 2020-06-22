@@ -4,11 +4,12 @@
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'ZCDS_DEPLOY_TEST'
 @Search.searchable : true
+@Metadata.allowExtensions: true
 define view ZCDS_DEPLOY_TEST as select from zdeploy_test as Booking
    association [0..1] to I_Country  as _Country  on $projection.country = _Country.Country
    association [0..1] to I_Currency as _Currency on $projection.CurrencyCode = _Currency.Currency {
     key booking              as Booking,
-         @Search.defaultSearchElement: true
+         
          customername         as CustomerName,
          numberofpassengers   as NumberOfPassengers,
          emailaddress         as EmailAddress,

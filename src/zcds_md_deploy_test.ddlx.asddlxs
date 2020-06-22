@@ -1,0 +1,6 @@
+@Metadata.layer: #CUSTOMER
+annotate view ZCDS_DEPLOY_TEST with
+{
+  @Search.defaultSearchElement: true
+  CustomerName;
+}
